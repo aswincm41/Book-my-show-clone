@@ -1,0 +1,31 @@
+{% extends 'navbar.html' %}
+{% block body %}
+<div class="container" style="padding-top: 200px;">
+    <h2 class="text-center mb-4 heading">Add New Movie</h2> <!-- Heading added here -->
+    
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mx-auto">
+            <form method="POST" enctype="multipart/form-data" class="movie-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name" style="color: white;">Movie Name:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Movie Name" required>
+                    <label for="name" style="color: white;">Description:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Movie Name" required>
+                    <label for="name" style="color: white;">Year:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Movie Name" required>
+                    <label for="name" style="color: white;">Movie Name:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Movie Name" required>
+                </div>
+                <!-- Other form fields -->
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="button" class="btn btn-secondary btn-block">Update</button>
+                    <button type="button" class="btn btn-danger btn-block">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

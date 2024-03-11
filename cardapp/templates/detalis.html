@@ -1,0 +1,30 @@
+{% extends 'navbar.html' %}
+{% block body %}
+<div class="container-fluid" style="background-image: url('{{ movie.background_image.url }}'); background-size: cover; background-position: center; height: 800px; padding-top: 40px; background-color: rgba(0, 0, 0, 0.5);"> <!-- Adjust opacity by changing the fourth parameter (0.5 in this case) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="movie-image-container" style="background-color: white; padding: 20px; border-radius: 10px; width: 300px;">
+                    <!-- Movie Image -->
+                    <img src="{{ movie.image.url }}" style="width: 260px; height: 300px;">
+                    <!-- Movie Name and Description -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <h3>{{ movie.name }}</h3>
+                        <p>{{ movie.description }}</p>
+                    </div>
+                    <!-- Buttons -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a class="btn btn-warning" href="{% url 'update' movie.id %}">Update</a>
+                        <a class="btn btn-danger" href="{% url 'delete' movie.id %}">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div>
+        <img src="C:/Users/91735/Desktop/Hajiali/Screenshot (1).png" alt="footer">
+    </div>
+</footer>
+{% endblock %}

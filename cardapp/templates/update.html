@@ -1,0 +1,56 @@
+{% extends 'navbar.html' %}
+{% block body %}
+
+<div class="container" style="padding-top: 10px;">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4 heading">ADD CHANGES</h2>
+            <form method="POST" enctype="multipart/form-data" class="movie-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Form styling */
+    .movie-form {
+        padding: 40px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    /* Heading styling */
+    .heading {
+        color: #333;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+</style>
+
+
+{% endblock %}

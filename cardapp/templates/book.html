@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333; /* Change color to improve visibility */
+            width: 120px;
+            height: 40px;
+            padding-left: 20px; /* Adjust padding for brand logo */
+        }
+        .search-bar-container {
+            position: relative;
+        }
+        .search-bar {
+            width: 300px;
+            padding: 8px 30px 8px 40px; /* Adjust padding to accommodate the icon */
+            border-radius: 20px; /* Add curved border */
+            border: none; /* Remove border */
+            margin-right: 20px;
+            outline: none; /* Remove outline on focus */
+        }
+        .search-bar::placeholder {
+            color: #999; /* Adjust placeholder color */
+            font-style: italic; /* Adjust placeholder font style */
+            border: 1px solid #ccc; /* Add border to placeholder */
+            border-radius:100px; /* Add curved border to placeholder */
+            padding: 5px; /* Adjust padding */
+            margin: 0; /* Remove margin */
+            
+        }
+        
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: #999; /* Adjust color of the icon */
+        }
+        .signin-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hamburger-menu {
+            display: none;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .search-bar {
+                display: none;
+            }
+            .hamburger-menu {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#"><img src="C:/Users/91735/Downloads/ofamrywy.png" alt="Brand Logo" class="navbar-brand"></a>
+    <div class="search-bar-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+        <input type="text" autocomplete="off" placeholder="Search for Movies, Events, Plays, Sports and Activities" class="search-bar">
+    </div>
+    <button class="signin-btn">Sign In</button>
+    <div class="hamburger-menu">&#9776;</div>
+</div>
+
+</body>
+</html>
